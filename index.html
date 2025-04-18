@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TrackOne</title>
+  <title>TrackOne - Fitness Tracker</title>
   <link rel="manifest" href="manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -12,13 +12,13 @@
       background-color: #333;
       color: white;
       font-family: Arial, sans-serif;
-      padding: 10px;
-      max-width: 500px;
+      padding: 20px;
+      max-width: 600px;
       margin: 0 auto;
     }
     .header {
       text-align: center;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
     .workout-day {
       font-size: 1.2em;
@@ -27,21 +27,14 @@
       margin-bottom: 15px;
       background-color: #444;
     }
-    .missed-training {
-      background-color: rgba(255, 0, 0, 0.3) !important;
-    }
     .entry-block {
       background-color: #444;
       border-radius: 8px;
       padding: 15px;
       margin-bottom: 15px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      border: 1px solid #666;
     }
     .input-group {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
     .input-group label {
       display: block;
@@ -49,6 +42,16 @@
       color: #aaa;
     }
     input {
+      background-color: #555;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    .profile-input {
       background-color: #555;
       color: white;
       border: none;
@@ -79,18 +82,27 @@
       cursor: pointer;
       font-size: 16px;
     }
-    .improvement {
-      background-color: rgba(76, 175, 80, 0.3) !important;
+    .back-button {
+      float: right;
+      background-color: #f44336;
+    }
+    .delete-profile-btn {
+      margin-top: 15px;  /* Mehr Abstand nach oben */
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      width: 90%;  /* Button nicht ganz breit */
+      margin-left: 5%; /* Button leicht nach links verschieben */
+    }
+    .profile-select-screen button {
+      width: 100%;
+      margin-top: 20px; /* Mehr Abstand zwischen den Buttons */
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <h1 id="current-date"></h1>
-    <div class="workout-day" id="muscle-groups"></div>
-  </div>
-  <div id="entries-container"></div>
-  <button id="add-entry">+ Neue Übung</button>
   <script src="app.js"></script>
 </body>
 </html>
